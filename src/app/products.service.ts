@@ -26,4 +26,10 @@ export class ProductsService {
   getProducts() {
     return this.http.get(`${this.url}`);
   }
+
+  editProduct(id) {
+    return this
+      .http
+      .get(`${this.url}/edit/${id}`);
+  }
 }
