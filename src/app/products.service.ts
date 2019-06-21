@@ -32,4 +32,15 @@ export class ProductsService {
       .http
       .get(`${this.url}/edit/${id}`);
   }
+
+  updateProduct(ProductName, ProductDescription, ProductPrice, id) {
+    const obj = {
+      ProductName,
+      ProductDescription,
+      ProductPrice
+    };
+
+    this.http.post(`${this.url}/update/${id}`, obj)
+    .subscribe(res => console.log('Done'));
+  }
 }
