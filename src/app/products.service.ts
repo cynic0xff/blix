@@ -43,4 +43,8 @@ export class ProductsService {
     this.http.post(`${this.url}/update/${id}`, obj)
     .subscribe(res => console.log('Done'));
   }
+
+  deleteProduct(id) {
+    return this.http.get(`${this.url}/delete/${id}`);
+  }
 }
